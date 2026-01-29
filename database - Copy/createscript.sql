@@ -1,14 +1,14 @@
 -- database
--- **********************************************************************
+-- ----------------------------------------------------------------------
  
 -- Stap : 01
 -- Doel : Maak een nieuwe database aan: Rollercoaster_2509b
--- **********************************************************************
+-- ----------------------------------------------------------------------
 -- Versie Datum Autuer Omschrijving
--- **********************************************************************
--- -- 01 - 04-12-2025 Kene John - Database met de hoogste
+-- ----------------------------------------------------------------------
+-- -- 01 04-12-2025 KeneJ Database met de hoogste
 -- -- achtbanen van Europa
--- **********************************************************************
+-- ----------------------------------------------------------------------
  
 -- Verwijder database Rollercoaster_2509b
 DROP DATABASE IF EXISTS Rollercoaster_2509b;
@@ -21,15 +21,12 @@ USE Rollercoaster_2509b;
  
 -- Stap : 02
 -- Doel : Maak een nieuwe tabel aan: Rollercoaster
--- **********************************************************************
+-- ----------------------------------------------------------------------
 -- Versie Datum Autuer Omschrijving
--- **********************************************************************
--- -- 01 - 04-12-2025: Kene John - Tabel met de hoogste
+-- ----------------------------------------------------------------------
+-- -- 01 04-12-2025 KeneJ Tabel met de hoogste
 -- -- achtbanen van Europa
-
-
-
--- **********************************************************************
+-- ----------------------------------------------------------------------
  
 -- Maak de tabel Rollercoaster
 CREATE TABLE Rollercoaster
@@ -47,18 +44,14 @@ CREATE TABLE Rollercoaster
   ,DateChanged         DATETIME(6)              NOT NULL      DEFAULT NOW(6)             COMMENT 'Timestamp of the latest update'
   ,CONSTRAINT          PK_Rollercoaster_Id      PRIMARY KEY (Id)
 ) ENGINE=InnoDB;
-
-
-
-
-
+ 
 -- Stap : 03
 -- ----------------------------------------------------------------------
 -- Doel : Vul de tabel Rollercoaster met data
 -- ----------------------------------------------------------------------
 -- Versie Datum Autuer Omschrijving
 -- ----------------------------------------------------------------------
--- -- 01 - 04-12-2025: Kene John - Vul tabel hoogste
+-- -- 01 04-12-2025 KeneJ Vul tabel hoogste
 -- -- achtbanen van Europa
 -- ----------------------------------------------------------------------
  
@@ -78,6 +71,3 @@ VALUES
   ,('Hyperion', 'Energylandia', 'Polen', 142, 77, '2018-08-14')
   ,('Shambhala', 'PortAventura Park', 'Spanje', 134, 76, '2012-04-07')
   ,('Schwur des Karnen', 'Hansa Park', 'Duitsland', 127, 73, '2017-02-25');
-  
-  
-  select * from rollercoaster;
